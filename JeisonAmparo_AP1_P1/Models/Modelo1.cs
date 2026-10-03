@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlantillaAP1P1.Models;
+namespace JeisonAmparo_AP1_P1.Models;
 
 public class Modelo1
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using PlantillaAP1P1.Components;
-using PlantillaAP1P1.Context;
-using PlantillaAP1P1.Services;
+using JeisonAmparo_AP1_P1.Components;
+using JeisonAmparo_AP1_P1.Context;
+using JeisonAmparo_AP1_P1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

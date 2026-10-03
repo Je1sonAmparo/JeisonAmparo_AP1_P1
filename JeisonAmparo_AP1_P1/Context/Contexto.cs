@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace PlantillaAP1P1.Context;
+namespace JeisonAmparo_AP1_P1.Context;
 
 public class Contexto : DbContext
 {

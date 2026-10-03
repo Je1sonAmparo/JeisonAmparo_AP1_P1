@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PlantillaAP1P1.Context;
-using PlantillaAP1P1.Models;
+using JeisonAmparo_AP1_P1.Context;
+using JeisonAmparo_AP1_P1.Models;
 using System.Linq.Expressions;
 
-namespace PlantillaAP1P1.Services;
+namespace JeisonAmparo_AP1_P1.Services;
 
 public class ModelosService(
 IDbContextFactory<Contexto> contextFactory

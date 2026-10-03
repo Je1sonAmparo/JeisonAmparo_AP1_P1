@@ -1,6 +1,6 @@
 ﻿using BlazorBootstrap;
 
-namespace PlantillaAP1P1.Extensors;
+namespace JeisonAmparo_AP1_P1.Extensors;
 public static class ToastServiceExtensions
 {
     // Generalized method to show any type of toast
