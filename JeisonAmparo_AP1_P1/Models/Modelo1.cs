@@ -7,4 +7,3 @@ public class Modelo1
     [Key]
     public int ModeloId { get; set; }
 }
-
