@@ -17,6 +17,6 @@ public class Autores
     public DateTime? FechaNacimiento { get; set; }
 
     [Required(ErrorMessage = "Debe ingresar un sueldo")]
-    [Range(0.01, double.MaxValue, ErrorMessage ="Debe de ingresar un sueldo")]
+    [Range(0.01, double.MaxValue, ErrorMessage = "Debe de ingresar un sueldo")]
     public Decimal? Sueldo { get; set; }
 }
