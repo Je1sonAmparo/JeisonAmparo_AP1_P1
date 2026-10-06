@@ -8,7 +8,7 @@
     <div class="card shadow-lg">
         <div class="card-header d-flex justify-content-between align-center mb-4">
             <h5 class="card-title">Registro De Autores</h5>
-            <a href="" class="btn btn-primary"> <span class="bi bi-plus-square mt-3"></span> Crear</a>
+            <a href="/Autor/Create" class="btn btn-primary"> <span class="bi bi-plus-square mt-3"></span> Crear</a>
         </div>
 
         @* Filtro *@
@@ -50,7 +50,7 @@
                     <TemplateColumn Title="Opciones" Align="Align.Center">
                         <div class="d-flex justify-content-center text-nowrap">
                             <a href="" class="btn btn-outline-primary bi bi-pencil-square"></a>
-                            <button type="button" class="btn btn-outline-danger bi bi-trash ms-2" data-bs-toggle="modal" data-bs-target="#modalEliminarEntrada" @onclick="() => autorIdEliminar = context.AutoresId"></button>
+                            <button type="button" class="btn btn-outline-danger bi bi-trash ms-2" data-bs-toggle="modal" data-bs-target="#modalEliminarAutor" @onclick="() => autorIdEliminar = context.AutoresId"></button>
                         </div>
                     </TemplateColumn>
                 </QuickGrid>
@@ -68,7 +68,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalEliminarEntradaLabel">Eliminar Autor</h1>
+                <h1 class="modal-title fs-5" id="modalEliminarAutorLabel">Eliminar Autor</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -109,9 +109,9 @@
             {
                 ListaAutores = await autoresService.GetList(a => a.Sueldo.ToString() == ValorFiltro);
             }
-            else
-                ListaAutores = await autoresService.GetList(a => true);
         }
+        else
+            ListaAutores = await autoresService.GetList(a => true);
     }
 
     private async Task Eliminar()
