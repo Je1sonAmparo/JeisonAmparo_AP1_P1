@@ -43,13 +43,13 @@
             <div class="grid">
                 <QuickGrid Items="@ListaAutores.AsQueryable()" class="table table-hover mt-3">
                     <PropertyColumn Property="@(a => a.AutoresId)" Title="AutoresId" Sortable="true"/>
-                    <PropertyColumn Property="@(a => a.Nombre)" Title="Nombre" Sortable="true" />
+                    <PropertyColumn Property="@(a => a.Nombres)" Title="Nombre" Sortable="true" />
                     <PropertyColumn Property="@(a => a.Nacionalidad)" Title="Nacionalidad" Sortable="true" />
                     <PropertyColumn Property="@(a => a.FechaNacimiento)" Title="Fecha de Nacimiento" Format="dd/MM/yyyy" Sortable="true" />
                     <PropertyColumn Property="@(a => a.Sueldo)" Title="Sueldo" Sortable="true" />
                     <TemplateColumn Title="Opciones" Align="Align.Center">
                         <div class="d-flex justify-content-center text-nowrap">
-                            <a href="" class="btn btn-outline-primary bi bi-pencil-square"></a>
+                            <a href="/Autor/Edit/@context.AutoresId" class="btn btn-outline-primary bi bi-pencil-square"></a>
                             <button type="button" class="btn btn-outline-danger bi bi-trash ms-2" data-bs-toggle="modal" data-bs-target="#modalEliminarAutor" @onclick="() => autorIdEliminar = context.AutoresId"></button>
                         </div>
                     </TemplateColumn>
@@ -99,7 +99,7 @@
         {
             if (Filtro == "Nombre")
             {
-                ListaAutores = await autoresService.GetList(a => a.Nombre!.Trim().ToLower() == ValorFiltro.Trim().ToLower());
+                ListaAutores = await autoresService.GetList(a => a.Nombres!.Trim().ToLower() == ValorFiltro.Trim().ToLower());
             }
             else if (Filtro == "Nacionalidad")
             {

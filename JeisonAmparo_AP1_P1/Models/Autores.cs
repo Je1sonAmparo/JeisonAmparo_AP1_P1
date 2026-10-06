@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace JeisonAmparo_AP1_P1.Models;
 
@@ -8,12 +9,12 @@ public class Autores
     public int AutoresId { get; set; }
 
     [Required(ErrorMessage = "Debe ingresar un nombre")]
-    public String? Nombre { get; set; }
+    public String? Nombres { get; set; }
 
     [Required(ErrorMessage = "Debe ingresar una nacionalidad")]
     public String? Nacionalidad { get; set; }
 
-    [Required(ErrorMessage = "Debe ingresar una fecha de nacimiento")]
+    [Required(ErrorMessage = "Debe ingresar una fecha de nacimiento")]    
     public DateTime? FechaNacimiento { get; set; }
 
     [Required(ErrorMessage = "Debe ingresar un sueldo")]
