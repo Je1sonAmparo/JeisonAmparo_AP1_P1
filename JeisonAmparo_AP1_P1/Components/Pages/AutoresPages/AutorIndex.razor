@@ -43,7 +43,7 @@
             <div class="grid">
                 <QuickGrid Items="@ListaAutores.AsQueryable()" class="table table-hover mt-3">
                     <PropertyColumn Property="@(a => a.AutoresId)" Title="AutoresId" Sortable="true"/>
-                    <PropertyColumn Property="@(a => a.Nombres)" Title="Nombre" Sortable="true" />
+                    <PropertyColumn Property="@(a => a.Nombres)" Title="Nombres" Sortable="true" />
                     <PropertyColumn Property="@(a => a.Nacionalidad)" Title="Nacionalidad" Sortable="true" />
                     <PropertyColumn Property="@(a => a.FechaNacimiento)" Title="Fecha de Nacimiento" Format="dd/MM/yyyy" Sortable="true" />
                     <PropertyColumn Property="@(a => a.Sueldo)" Title="Sueldo" Sortable="true" />
