@@ -8,7 +8,7 @@
     <div class="card shadow-lg">
         <div class="card-header d-flex justify-content-between align-center mb-4">
             <h5 class="card-title">Registro De Autores</h5>
-            <a href="/Autor/Create" class="btn btn-primary"> <span class="bi bi-plus-square mt-3"></span> Crear</a>
+            <a href="/Autores/Create" class="btn btn-primary"> <span class="bi bi-plus-square mt-3"></span> Crear</a>
         </div>
 
         @* Filtro *@
@@ -49,7 +49,7 @@
                     <PropertyColumn Property="@(a => a.Sueldo)" Title="Sueldo" Sortable="true" />
                     <TemplateColumn Title="Opciones" Align="Align.Center">
                         <div class="d-flex justify-content-center text-nowrap">
-                            <a href="/Autor/Edit/@context.AutoresId" class="btn btn-outline-primary bi bi-pencil-square"></a>
+                            <a href="/Autores/Edit/@context.AutoresId" class="btn btn-outline-primary bi bi-pencil-square"></a>
                             <button type="button" class="btn btn-outline-danger bi bi-trash ms-2" data-bs-toggle="modal" data-bs-target="#modalEliminarAutor" @onclick="() => autorIdEliminar = context.AutoresId"></button>
                         </div>
                     </TemplateColumn>
