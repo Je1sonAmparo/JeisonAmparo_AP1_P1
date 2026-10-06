@@ -87,15 +87,25 @@
 
     public async Task Guardar()
     {
-        var modificado = await autoresService.Guardar(Autor);
-        if (modificado)
+        Autor.Nombres = Autor.Nombres?.Trim();
+
+        var nombreExiste = await autoresService.GetList(e => e.Nombres!.ToLower() == Autor.Nombres!.ToLower());
+
+        if (nombreExiste.Any())
         {
-            toastService.ShowSuccess("Autor modificado exitosamente");
-            navigationManager.NavigateTo("/Autores/Index");
+            toastService.ShowError("Ya existe un autor registrado con este nombre.");
+            return;
+        }
+
+        var creado = await autoresService.Guardar(Autor);
+        if (creado)
+        {
+            toastService.ShowSuccess("Autor guardado exitosamente");
+            navigationManager.NavigateTo("/Estudiante/Index");
         }
         else
         {
-            toastService.ShowError("No se pudo modificar el autor");
+            toastService.ShowError("No se pudo guardar el autor.");
         }
     }
 
