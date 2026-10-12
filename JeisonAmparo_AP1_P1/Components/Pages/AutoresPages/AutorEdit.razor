@@ -89,7 +89,9 @@
     {
         Autor.Nombres = Autor.Nombres?.Trim();
 
-        var nombreExiste = await autoresService.GetList(e => e.Nombres!.ToLower() == Autor.Nombres!.ToLower());
+        var nombreExiste = await autoresService.GetList(e =>
+            e.AutoresId != Autor.AutoresId &&
+            e.Nombres!.ToLower() == Autor.Nombres!.ToLower());
 
         if (nombreExiste.Any())
         {
